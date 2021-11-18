@@ -49,8 +49,8 @@ void	moveup(t_data *img);
 void	moveleft(t_data *img);
 void	movedown(t_data *img);
 void	moveright(t_data *img);
-size_t	ft_strnolen(const char *str);
 int		checklines(char **line);
+size_t	ft_strnllen(const char *str);
 
 /*
 ** Checks functions

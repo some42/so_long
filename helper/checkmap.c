@@ -6,7 +6,7 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:11:55 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/10 21:44:02 by agaliste         ###   ########.fr       */
+/*   Updated: 2021/11/18 14:09:52 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	checkborder(char line)
 {
 	if (line != '1')
-		printerror("Map error: Invalid map borders\n");
+		printerror("Map: Invalid map borders\n");
 }
 
 static void	checkelemnts(char **map, t_data *img)
@@ -41,8 +41,8 @@ static void	checkelemnts(char **map, t_data *img)
 				eocur += 1;
 		}
 	}
-	if (!(eocur > 0 && pocur == 1 && img->cocur > 0))
-		printerror("Map error: Not enought players, escapes or coins\n");
+	if (!(eocur == 1 && pocur == 1 && img->cocur > 0))
+		printerror("Map: Only 1 Escape, 1 Player and at least 1 coin allowed\n");
 }
 
 static void	checkmapcontent2(char **map, t_data *img)
@@ -60,7 +60,7 @@ static void	checkmapcontent2(char **map, t_data *img)
 				checkborder(map[i][j]);
 			if (!(map[i][j] == 'C' || map[i][j] == 'P' || map[i][j] == '1'
 					|| map[i][j] == '0' || map[i][j] == 'E'))
-				printerror("Map error: Invalid element on map\n");
+				printerror("Map: Invalid element on map\n");
 		}
 	}
 	checkelemnts(map, img);
@@ -69,10 +69,10 @@ static void	checkmapcontent2(char **map, t_data *img)
 void	checkmapcontent(char **map, t_data *img)
 {
 	if (!map)
-		printerror("Map error: No map");
+		printerror("Map: No map");
 	if (img->x_size == img->y_size)
-		printerror("Map error: Square maps are not valid");
+		printerror("Map: Square maps are not valid");
 	if (checklinelen(map, (*img)) || img->y_size < 3)
-		printerror("Map error: Invalid map");
+		printerror("Map: Invalid map");
 	checkmapcontent2(map, img);
 }

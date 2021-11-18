@@ -6,11 +6,21 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 02:18:36 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/09 16:11:04 by agaliste         ###   ########.fr       */
+/*   Updated: 2021/11/18 14:11:37 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
+
+size_t	ft_strnllen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0' && str[i] != '\n')
+		i++;
+	return (i);
+}
 
 void	printerror(char *error)
 {
