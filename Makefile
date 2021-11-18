@@ -20,6 +20,7 @@ INCL= ./libft/libft.a \
 CC = gcc
 
 %.o: %.c
+	@make libs
 	$(CC) $(FLAGS) -Imlx -c $< -o $@
 
 $(NAME): $(OBJS)
