@@ -6,7 +6,7 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 01:48:37 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/17 22:56:10 by agaliste         ###   ########.fr       */
+/*   Updated: 2021/11/18 15:11:33 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(int argc, char **argv)
 	img.y_size = getleny(img.map);
 	img.x_size = ft_strnllen(img.map[0]);
 	checkmapcontent(img.map, &img);
-	printmap(img.map);
 	img.mlx = mlx_init();
 	img.win = mlx_new_window(img.mlx, 32 * img.x_size, 32 * img.y_size,
 			"Er so long mu largo");
