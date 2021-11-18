@@ -6,7 +6,7 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:11:55 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/18 14:09:52 by agaliste         ###   ########.fr       */
+/*   Updated: 2021/11/18 14:43:43 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ static void	checkmapcontent2(char **map, t_data *img)
 		j = -1;
 		while (map[i][++j] != '\n' && map[i][j] != '\0')
 		{
-			if (i == 0 || j == 0 || j == img->x_size || i == img->y_size)
+			if (i == 0 || j == 0 || j == img->x_size - 1
+				|| i == img->y_size - 1)
 				checkborder(map[i][j]);
 			if (!(map[i][j] == 'C' || map[i][j] == 'P' || map[i][j] == '1'
 					|| map[i][j] == '0' || map[i][j] == 'E'))

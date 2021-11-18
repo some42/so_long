@@ -6,7 +6,7 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 23:06:04 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/10 03:07:11 by agaliste         ###   ########.fr       */
+/*   Updated: 2021/11/18 14:43:03 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	key_hook(int keycode, void *var)
 {
 	t_data	*img;
 
-	img = (t_data*)var;
+	img = (t_data *)var;
 	if (keycode == 53)
 	{
 		mlx_destroy_window(img->mlx, img->win);
