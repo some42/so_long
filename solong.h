@@ -6,7 +6,7 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:43:10 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/18 14:43:11 by agaliste         ###   ########.fr       */
+/*   Updated: 2021/11/18 15:12:38 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ char	**parsemap(int fd);
 */
 
 void	printerror(char *error);
-void	printmap(char **map);
 int		prgclose(int keycode, void *vars);
 size_t	getleny(char **str);
 void	moveup(t_data *img);
