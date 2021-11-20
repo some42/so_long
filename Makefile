@@ -15,21 +15,24 @@ FLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
 
-INCL= ./libft/libft.a \
+LIBFT= ./libft/libft.a
+
+MLX= ./mlx/libmlx.a
 
 CC = gcc
 
-%.o: %.c
-	@make libs
-	$(CC) $(FLAGS) -Imlx -c $< -o $@
-
-$(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(SRCS) -Iincludes $(INCL) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
-
 all: $(NAME)
 
-libs:
+%.o: %.c
+	$(CC) $(FLAGS) -Imlx -c $< -o $@
+
+$(NAME): $(OBJS) $(INCL) $(MLX)
+	$(CC) $(FLAGS) $(SRCS) -Iincludes $(LIBFT) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+
+$(LIBFT):
 	@make bonus -C ./libft/
+	
+$(MLX):
 	@make -C ./mlx/
 
 clean:
