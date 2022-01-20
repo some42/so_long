@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 03:10:16 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/08 19:51:15 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:40:55 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-static void	drawground(t_data *img, size_t i, size_t x, size_t y)
+static inline void
+	drawground(t_data *img, size_t i, size_t x, size_t y)
 {
 	size_t	j;
 
@@ -39,7 +40,8 @@ static void	drawground(t_data *img, size_t i, size_t x, size_t y)
 	}
 }
 
-static void	drawelse(t_data img, size_t i, size_t x, size_t y)
+static inline void
+	drawelse(t_data img, size_t i, size_t x, size_t y)
 {
 	size_t	j;
 
@@ -63,7 +65,8 @@ static void	drawelse(t_data img, size_t i, size_t x, size_t y)
 	}
 }
 
-static void	drawupdt(t_data img, size_t arg, size_t x, size_t y)
+static inline void
+	drawupdt(t_data img, size_t arg, size_t x, size_t y)
 {
 	size_t	j;
 	size_t	i;
@@ -85,7 +88,8 @@ static void	drawupdt(t_data img, size_t arg, size_t x, size_t y)
 	}
 }
 
-void	changesprt(t_data img, size_t arg, size_t x, size_t y)
+void
+	changesprt(t_data img, size_t arg, size_t x, size_t y)
 {
 	size_t	j;
 	size_t	i;
@@ -107,7 +111,8 @@ void	changesprt(t_data img, size_t arg, size_t x, size_t y)
 	}
 }
 
-void	draw(t_data *img, int arg)
+void
+	draw(t_data *img, int arg)
 {
 	if (arg == 0)
 	{

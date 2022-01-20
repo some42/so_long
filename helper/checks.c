@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 23:30:07 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/10 01:53:07 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:42:25 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-int	checklinelen(char **line, t_data img)
+int
+	checklinelen(char **line, t_data img)
 {
 	size_t	i;
 
@@ -25,7 +26,8 @@ int	checklinelen(char **line, t_data img)
 	return (0);
 }
 
-int	checkbujero(t_data img, int i)
+int
+	checkbujero(t_data img, int i)
 {
 	if (i == 0 && img.map[img.pos[0] - 1][img.pos[1]] == 'E')
 		return (0);
@@ -38,7 +40,8 @@ int	checkbujero(t_data img, int i)
 	return (1);
 }
 
-void	checkcoin(t_data *img, int i)
+void
+	checkcoin(t_data *img, int i)
 {
 	if (i == 0 && img->map[img->pos[0] - 1][img->pos[1]] == 'C')
 	{

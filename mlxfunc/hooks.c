@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 23:06:04 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/18 14:43:03 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:42:57 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-int	key_hook(int keycode, void *var)
+int
+	key_hook(int keycode, void *var)
 {
 	t_data	*img;
 

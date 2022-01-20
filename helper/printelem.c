@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 19:09:01 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/07 19:33:51 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:41:36 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-static void	printelem3(t_data *img, int i, size_t y, size_t x)
+static inline void
+	printelem3(t_data *img, int i, size_t y, size_t x)
 {
 	if (i == 6)
 	{
@@ -37,7 +38,8 @@ static void	printelem3(t_data *img, int i, size_t y, size_t x)
 	}
 }
 
-static void	printelem2(t_data *img, int i, size_t y, size_t x)
+static inline void
+	printelem2(t_data *img, int i, size_t y, size_t x)
 {
 	if (i == 3)
 	{
@@ -62,7 +64,8 @@ static void	printelem2(t_data *img, int i, size_t y, size_t x)
 	}
 }
 
-void	printelem(t_data *img, int i, size_t y, size_t x)
+void
+	printelem(t_data *img, int i, size_t y, size_t x)
 {
 	if (i == 0)
 	{

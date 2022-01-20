@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 03:35:03 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/07 21:48:49 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:40:13 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-void	moveup(t_data *img)
+void
+	moveup(t_data *img)
 {
 	if (!modifymap(img, 0))
 	{
@@ -26,7 +27,8 @@ void	moveup(t_data *img)
 		changesprt((*img), 1, 0, 0);
 }
 
-void	movedown(t_data *img)
+void
+	movedown(t_data *img)
 {
 	if (!modifymap(img, 1))
 	{
@@ -40,7 +42,8 @@ void	movedown(t_data *img)
 		changesprt((*img), 6, 0, 0);
 }
 
-void	moveleft(t_data *img)
+void
+	moveleft(t_data *img)
 {
 	if (!modifymap(img, 2))
 	{
@@ -54,7 +57,8 @@ void	moveleft(t_data *img)
 		changesprt((*img), 7, 0, 0);
 }
 
-void	moveright(t_data *img)
+void
+	moveright(t_data *img)
 {
 	if (!modifymap(img, 3))
 	{

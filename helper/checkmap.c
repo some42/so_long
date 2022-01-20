@@ -6,19 +6,21 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:11:55 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/18 14:43:43 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:42:13 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-static void	checkborder(char line)
+static inline void
+	checkborder(char line)
 {
 	if (line != '1')
 		printerror("Map: Invalid map borders\n");
 }
 
-static void	checkelemnts(char **map, t_data *img)
+static inline void
+	checkelemnts(char **map, t_data *img)
 {
 	size_t	i;
 	size_t	j;
@@ -45,7 +47,8 @@ static void	checkelemnts(char **map, t_data *img)
 		printerror("Map: Only 1 Escape, 1 Player and at least 1 coin allowed\n");
 }
 
-static void	checkmapcontent2(char **map, t_data *img)
+static inline void
+	checkmapcontent2(char **map, t_data *img)
 {
 	size_t	i;
 	size_t	j;
@@ -67,7 +70,8 @@ static void	checkmapcontent2(char **map, t_data *img)
 	checkelemnts(map, img);
 }
 
-void	checkmapcontent(char **map, t_data *img)
+void
+	checkmapcontent(char **map, t_data *img)
 {
 	if (!map)
 		printerror("Map: No map");

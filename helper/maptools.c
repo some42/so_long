@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 16:28:38 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/07 21:30:06 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:39:48 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-static void	mup(t_data *img, char aux)
+static inline void
+	mup(t_data *img, char aux)
 {
 	img->map[img->pos[0]][img->pos[1]] = img->map[img->pos[0] - 1][img->pos[1]];
 	img->map[img->pos[0] - 1][img->pos[1]] = aux;
@@ -21,7 +22,8 @@ static void	mup(t_data *img, char aux)
 	img->pos[0] -= 1;
 }
 
-static void	mdown(t_data *img, char aux)
+static inline void
+	mdown(t_data *img, char aux)
 {
 	img->map[img->pos[0]][img->pos[1]] = img->map[img->pos[0] + 1][img->pos[1]];
 	img->map[img->pos[0] + 1][img->pos[1]] = aux;
@@ -30,7 +32,8 @@ static void	mdown(t_data *img, char aux)
 	img->pos[0] += 1;
 }
 
-static void	mleft(t_data *img, char aux)
+static inline void
+	mleft(t_data *img, char aux)
 {
 	img->map[img->pos[0]][img->pos[1]] = img->map[img->pos[0]][img->pos[1] - 1];
 	img->map[img->pos[0]][img->pos[1] - 1] = aux;
@@ -39,7 +42,8 @@ static void	mleft(t_data *img, char aux)
 	img->pos[1] -= 1;
 }
 
-static void	mright(t_data *img, char aux)
+static inline void
+	mright(t_data *img, char aux)
 {
 	img->map[img->pos[0]][img->pos[1]] = img->map[img->pos[0]][img->pos[1] + 1];
 	img->map[img->pos[0]][img->pos[1] + 1] = aux;
@@ -48,7 +52,8 @@ static void	mright(t_data *img, char aux)
 	img->pos[1] += 1;
 }
 
-int	modifymap(t_data *img, int i)
+int
+	modifymap(t_data *img, int i)
 {
 	char	aux;
 

@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 22:09:49 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/18 14:11:23 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:41:15 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-void	parseinput(const int argc, const char *argv)
+void
+	parseinput(const int argc, const char *argv)
 {
 	char	*tmp;
 
@@ -27,7 +28,8 @@ void	parseinput(const int argc, const char *argv)
 		printerror("Argument: Only .ber map file accepted");
 }
 
-char	**parsemap(int fd)
+char
+	**parsemap(int fd)
 {
 	char	**map;
 	char	*line;
@@ -37,7 +39,7 @@ char	**parsemap(int fd)
 	i = 1;
 	if (!fd || fd < 0 || fd > 256)
 		printerror("Map: Map does not exist");
-	line = get_next_line(fd);
+	line = ft_gnl(fd);
 	if (!line || line[0] != '1')
 		printerror("Map: Invalid map");
 	len = ft_strnllen(line);
@@ -47,7 +49,7 @@ char	**parsemap(int fd)
 	map[0] = line;
 	while (line)
 	{
-		line = get_next_line(fd);
+		line = ft_gnl(fd);
 		map = (char **) ft_realloc(map, sizeof(char *) * len * i);
 		map[i++] = line;
 	}

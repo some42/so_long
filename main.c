@@ -6,20 +6,22 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 01:48:37 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/18 15:11:33 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:43:06 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "solong.h"
 
-static void	startmlx(t_data img)
+static inline void
+	startmlx(t_data img)
 {
 	mlx_hook(img.win, 17, 0L, prgclose, &img);
 	mlx_hook(img.win, 2, 1L << 0, key_hook, &img);
 	mlx_loop(img.mlx);
 }
 
-int	main(int argc, char **argv)
+int
+	main(int argc, char **argv)
 {
 	t_data	img;
 	int		fd;

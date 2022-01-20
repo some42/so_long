@@ -6,13 +6,14 @@
 /*   By: agaliste <agaliste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 02:18:36 by agaliste          #+#    #+#             */
-/*   Updated: 2021/11/18 15:12:19 by agaliste         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:41:58 by agaliste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../solong.h"
 
-size_t	ft_strnllen(const char *str)
+size_t
+	ft_strnllen(const char *str)
 {
 	size_t	i;
 
@@ -22,7 +23,8 @@ size_t	ft_strnllen(const char *str)
 	return (i);
 }
 
-void	printerror(char *error)
+void
+	printerror(char *error)
 {
 	write(1, "Error\n", 7);
 	write(1, error, ft_strlen(error));
@@ -30,14 +32,16 @@ void	printerror(char *error)
 	exit(1);
 }
 
-int	prgclose(int keycode, void *vars)
+int
+	prgclose(int keycode, void *vars)
 {
 	(void)keycode;
 	(void)vars;
 	exit(0);
 }
 
-size_t	getleny(char **str)
+size_t
+	getleny(char **str)
 {
 	int	i;
 
